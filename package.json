@@ -26,7 +26,8 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test"
+    "test": "tsdx test",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {},
   "husky": {
@@ -49,7 +50,8 @@
     "rehype": "^7.0.0",
     "tsdx": "^0.5.11",
     "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "semantic-release": "^15.13.12"
   },
   "dependencies": {
     "hast-util-heading": "^1.0.2",
