@@ -1,0 +1,58 @@
+{
+  "name": "@agentofuser/rehype-section",
+  "version": "0.1.2",
+  "description": "Wrap headings and their content into (nested) sections",
+  "license": "MIT",
+  "keywords": [
+    "rehype",
+    "plugin",
+    "section",
+    "heading",
+    "wrap"
+  ],
+  "repository": "agentofuser/rehype-section",
+  "bugs": "https://github.com/agentofuser/rehype-section/issues",
+  "author": "Agent of User <git@agentofuser.com> (https://agentofuser.com)",
+  "contributors": [
+    "Agent of User <git@agentofuser.com> (https://agentofuser.com)"
+  ],
+  "main": "dist/index.js",
+  "umd:main": "dist/rehype-section.umd.production.js",
+  "module": "dist/rehype-section.es.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 79,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "proseWrap": "always"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "husky": "^2.3.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "rehype": "^7.0.0",
+    "tsdx": "^0.5.11",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "hast-util-heading": "^1.0.2",
+    "hastscript": "^5.0.0"
+  }
+}
