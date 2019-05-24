@@ -29,6 +29,15 @@
     "test": "tsdx test",
     "semantic-release": "semantic-release"
   },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
+  },
   "peerDependencies": {},
   "husky": {
     "hooks": {
@@ -43,15 +52,20 @@
     "proseWrap": "always"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.7",
+    "@semantic-release/release-notes-generator": "^7.1.4",
     "@types/jest": "^24.0.13",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "pretty-quick": "^1.11.0",
     "rehype": "^7.0.0",
+    "semantic-release": "^15.13.12",
     "tsdx": "^0.5.11",
     "tslib": "^1.9.3",
-    "typescript": "^3.4.5",
-    "semantic-release": "^15.13.12"
+    "typescript": "^3.4.5"
   },
   "dependencies": {
     "hast-util-heading": "^1.0.2",
