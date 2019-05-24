@@ -5,6 +5,8 @@
   "license": "MIT",
   "keywords": [
     "rehype",
+    "rehype-plugin",
+    "html",
     "plugin",
     "section",
     "heading",
@@ -24,10 +26,12 @@
     "dist"
   ],
   "scripts": {
-    "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test",
-    "semantic-release": "semantic-release"
+    "commit": "git-cz",
+    "commit:retry": "git-cz --retry",
+    "semantic-release": "semantic-release",
+    "start": "tsdx watch",
+    "test": "tsdx test"
   },
   "release": {
     "plugins": [
@@ -37,6 +41,22 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": 50,
+      "body-max-line-length": 72,
+      "footer-max-line-length": 72,
+      "scope-empty": "never"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "peerDependencies": {},
   "husky": {
@@ -52,12 +72,17 @@
     "proseWrap": "always"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@commitlint/travis-cli": "^7.6.1",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/npm": "^5.1.7",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "@types/jest": "^24.0.13",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "pretty-quick": "^1.11.0",
