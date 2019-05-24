@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- lts/boron
+- node
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure:
+  file:
+    - "rehype-section.js"
+    - "rehype-section.min.js"
+  on:
+    tags: true

@@ -1,0 +1,48 @@
+{
+  "name": "@agentofuser/rehype-section",
+  "version": "0.1.0",
+  "description": "Wrap headings and their content into (nested) sections",
+  "license": "MIT",
+  "keywords": [
+    "rehype",
+    "plugin",
+    "section",
+    "heading",
+    "wrap"
+  ],
+  "repository": "agentofuser/rehype-section",
+  "bugs": "https://github.com/agentofuser/rehype-section/issues",
+  "author": "Agent of User <git@agentofuser.com> (https://agentofuser.com)",
+  "contributors": [
+    "Agent of User <git@agentofuser.com> (https://agentofuser.com)"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "hast-util-heading": "^1.0.2",
+    "hastscript": "^5.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.0.0",
+    "prettier": "^1.13.7",
+    "rehype": "^6.0.0",
+    "tape": "^4.0.0",
+    "tinyify": "^2.4.3"
+  },
+  "scripts": {
+    "format": "prettier --write '**/*.js'",
+    "build-bundle": "browserify index.js -s rehypeSection > rehype-section.js",
+    "build-mangle": "browserify index.js -s rehypeSection -p tinyify > rehype-section.min.js",
+    "build": "npm run build-bundle && npm run build-mangle",
+    "test-api": "node test",
+    "test": "npm run format && npm run build"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 79,
+    "proseWrap": "always"
+  }
+}
