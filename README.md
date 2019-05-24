@@ -111,7 +111,7 @@ repository, organisation, or community you agree to abide by its terms.
 [build-badge]: https://img.shields.io/travis/agentofuser/rehype-section.svg
 [build]: https://travis-ci.org/agentofuser/rehype-section
 [downloads-badge]: https://img.shields.io/npm/dm/rehype-section.svg
-[downloads]: https://www.npmjs.com/package/rehype-section
+[downloads]: https://www.npmjs.com/package/@agentofuser/rehype-section
 [chat-badge]:
   https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
 [chat]: https://spectrum.chat/unified/rehype
