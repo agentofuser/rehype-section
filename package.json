@@ -47,10 +47,25 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "header-max-length": 50,
-      "body-max-line-length": 72,
-      "footer-max-line-length": 72,
-      "scope-empty": "never"
+      "header-max-length": [
+        2,
+        "always",
+        50
+      ],
+      "body-max-line-length": [
+        2,
+        "always",
+        72
+      ],
+      "footer-max-line-length": [
+        2,
+        "always",
+        72
+      ],
+      "scope-empty": [
+        2,
+        "never"
+      ]
     }
   },
   "config": {
