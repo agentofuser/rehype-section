@@ -4,11 +4,10 @@ node_js:
 - node
 deploy:
   provider: releases
-  skip_cleanup: true
   api_key:
-    secure:
+    secure: o0iSk3lEFL2tzhwVdYTvD9FSc6hcRSztIlZq8sOPuJiF/urzdOlNX9978g9r2wE8FnFwYhP6AwION6yO3SVU/tbBVuwHL1XmGz1aphCtW8OZGJrmUmiuB/SQMiIVnU/5MxbcpfnplyURkm3v9Vdrv8cHi/MyqmUcO97aH5vrv9TNU8rKTVe0Sh/3OFpBN1jcD6HZzjJAxvzyUPuvNXCFQVbomuXpdIZtGsc0cg0vqStherp0Ftc4kK1hkNIKgl9RHZz56IJG8yJc8wpl1zlrbuxcr7iOUeBrtr8auSqvOsf0nC5o+j+PHwVRg5QNpAvaBhf9mXyTyV5a+U76tmwVx8Mgeo00Av8ZkNhrSGxdnA2YylfNEoVFCuBSdpjhzICDdj/0bGrmcpThVskdaaxSPeszS4CIsJtOg7Vi5Fe+UBc4krp8x/dmqoGkInm1CX6Y0rNcHx0nUAosu3Zvi6BXYzJO9ca5RCXIO7YPkQs+dxisWwaax6/Oh/ut5rrr0hBj5f3k4mw4eOjd0nWP+rEDgnFJDLYJOl9Mzte7W5TF4gk7RAZ6Xz7SeGZ9hFZfSfSyhG1DgVpVKB/9xJcyUqQAobsYLUlVPyl6PYN69RNpmax2BX5e9mXszuqDXDfM9Y6WiOrl5V15pYbuXZt/cPzjgq9kSQQ8tx7TcyRQGHjbNwE=
   file:
-    - "rehype-section.js"
-    - "rehype-section.min.js"
+    - rehype-section.js
+    - rehype-section.min.js
   on:
-    tags: true
+    repo: agentofuser/rehype-section
