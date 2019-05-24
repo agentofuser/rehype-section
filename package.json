@@ -1,6 +1,6 @@
 {
   "name": "@agentofuser/rehype-section",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wrap headings and their content into (nested) sections",
   "license": "MIT",
   "keywords": [
