@@ -1,27 +1,123 @@
-# TSDX Bootstrap
+# rehype-section
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+[![Downloads][downloads-badge]][downloads] [![Chat][chat-badge]][chat]
 
-## Local Development
+Wraps headings and their contents in `<section>` elements.
 
-Below is a list of commands you will probably find useful.
+## Installation
 
-### `npm start` or `yarn start`
+[npm][]:
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+```bash
+npm install @agentofuser/rehype-section
+```
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+## Usage
 
-Your library will be rebuilt if you make edits.
+Say we have the following file, `fragment.html`:
 
-### `npm run build` or `yarn build`
+<!-- prettier-ignore -->
+```html
+<h1>h1</h1>
+  <h2>h2a</h2>
+    <h3>h3ai</h3>
+      <p>text3ai</p>
+    <h3>h3aj</h3>
+      <p>text3aj</p>
+  <h2>h2b</h2>
+    <h3>h3bi</h3>
+      <h4>h4bix</h4>
+        <p>text4bix</p>
+  <h2>h2c</h2>
+    <h3>h3ci</h3>
+      <p>text3ci</p>
+```
 
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
+And our script, `example.js`, looks as follows:
 
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
+```javascript
+var fs = require('fs')
+var rehype = require('rehype')
+var section = require('rehype-section')
 
-### `npm test` or `yarn test`
+rehype()
+  .data('settings', { fragment: true })
+  .use(section)
+  .process(fs.readFileSync('fragment.html'), function(err, file) {
+    if (err) throw err
+    console.log(String(file))
+  })
+```
 
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
+Now, running `node example` yields:
+
+<!-- prettier-ignore -->
+```html
+<section class="h0Wrapper headingWrapper">
+  <section class="h1Wrapper headingWrapper">
+    <h1>h1</h1>
+    <section class="h2Wrapper headingWrapper">
+      <h2>h2a</h2>
+      <section class="h3Wrapper headingWrapper">
+        <h3>h3ai</h3>
+        <p>text3ai</p>
+      </section>
+      <section class="h3Wrapper headingWrapper">
+        <h3>h3aj</h3>
+        <p>text3aj</p>
+      </section>
+    </section>
+    <section class="h2Wrapper headingWrapper">
+      <h2>h2b</h2>
+      <section class="h3Wrapper headingWrapper">
+        <h3>h3bi</h3>
+        <section class="h4Wrapper headingWrapper">
+          <h4>h4bix</h4>
+          <p>text4bix</p>
+        </section>
+      </section>
+    </section>
+    <section class="h2Wrapper headingWrapper">
+      <h2>h2c</h2>
+      <section class="h3Wrapper headingWrapper">
+        <h3>h3ci</h3>
+        <p>text3ci</p>
+      </section>
+    </section>
+  </section>
+</section>
+```
+
+## API
+
+### `rehype().use(section)`
+
+Wraps headings and their contents in `<section>` elements.
+
+## Contribute
+
+See [`contributing.md` in `rehypejs/rehype`][contribute] for ways to get
+started.
+
+This organisation has a [Code of Conduct][coc]. By interacting with this
+repository, organisation, or community you agree to abide by its terms.
+
+## License
+
+[MIT][license] © [Agent of User][author]
+
+<!-- Definitions -->
+
+[build-badge]: https://img.shields.io/travis/agentofuser/rehype-section.svg
+[build]: https://travis-ci.org/agentofuser/rehype-section
+[downloads-badge]: https://img.shields.io/npm/dm/rehype-section.svg
+[downloads]: https://www.npmjs.com/package/rehype-section
+[chat-badge]:
+  https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+[chat]: https://spectrum.chat/unified/rehype
+[npm]: https://docs.npmjs.com/cli/install
+[license]: license
+[author]: https://agentofuser.com
+[rehype]: https://github.com/rehypejs/rehype
+[contribute]: https://github.com/rehypejs/rehype/blob/master/contributing.md
+[coc]: https://github.com/rehypejs/rehype/blob/master/code-of-conduct.md
