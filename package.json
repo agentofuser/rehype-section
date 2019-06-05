@@ -91,9 +91,9 @@
     "proseWrap": "always"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
-    "@commitlint/config-conventional": "^7.6.0",
-    "@commitlint/travis-cli": "^7.6.1",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/travis-cli": "^8.0.0",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
@@ -105,14 +105,14 @@
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "pretty-quick": "^1.11.0",
-    "rehype": "^7.0.0",
+    "rehype": "^8.0.0",
     "semantic-release": "^15.13.12",
-    "tsdx": "^0.5.11",
+    "tsdx": "^0.6.1",
     "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.1"
   },
   "dependencies": {
-    "hast-util-heading": "^1.0.2",
-    "hastscript": "^5.0.0"
+    "hast-util-heading": "^1.0.3",
+    "hastscript": "^5.1.0"
   }
 }
