@@ -38,7 +38,7 @@ And our script, `example.js`, looks as follows:
 ```javascript
 var fs = require('fs')
 var rehype = require('rehype')
-var section = require('rehype-section')
+var section = require('@agentofuser/rehype-section').default
 
 rehype()
   .data('settings', { fragment: true })
