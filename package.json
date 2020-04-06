@@ -103,7 +103,7 @@
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^2.3.0",
-    "prettier": "^1.17.1",
+    "prettier": "^2.0.3",
     "pretty-quick": "^1.11.0",
     "rehype": "^8.0.0",
     "semantic-release": "^15.13.12",
