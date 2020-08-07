@@ -108,7 +108,7 @@
     "rehype": "^8.0.0",
     "semantic-release": "^15.13.12",
     "tsdx": "^0.6.1",
-    "tslib": "^1.9.3",
+    "tslib": "^2.0.1",
     "typescript": "^3.5.1"
   },
   "dependencies": {
