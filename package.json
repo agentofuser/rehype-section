@@ -106,7 +106,7 @@
     "prettier": "^1.17.1",
     "pretty-quick": "^1.11.0",
     "rehype": "^8.0.0",
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^17.2.3",
     "tsdx": "^0.6.1",
     "tslib": "^1.9.3",
     "typescript": "^3.5.1"
